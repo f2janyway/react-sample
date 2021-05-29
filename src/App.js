@@ -24,7 +24,7 @@ class Board extends React.Component {
     };
   }
   call = async () => {
-    axios.get("https://yts.mx/api/v2/list_movies.json").then(response => {
+    axios.get("https://yts.mx/api/v2/list_movies.json?quality=3D").then(response => {
       this.setState({
         movies: response.data.data.movies
       });
